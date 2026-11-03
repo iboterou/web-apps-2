@@ -2,6 +2,7 @@ class CompaniesController < ApplicationController
 
   def index
     # find all Company rows (today this line is still in the view)
+    @companies = Company.all %> #The @ makes it an instance variable
     # render companies/index view
     render({ :template => "companies/index" })
   end
